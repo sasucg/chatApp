@@ -21,9 +21,9 @@ class Dashboard extends React.Component {
                     <div>
                         <TextField fullWidth={true} placeholder="Introdu text" variant="outlined" margin="dense"/>
                     </div>
-                    <div>
+                    <div className="div-buton">
                     <img src={SendSvg} className='send-button' onClick={()=>{alert('ok')}} /> 
-
+                    
                     </div>
                 </div>
             </div>
