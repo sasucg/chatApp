@@ -1,0 +1,102 @@
+.channels-list{ 
+    height: 95vh;
+    width: 35%;
+    color: black;
+    list-style-type: disc;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    font-weight: bold;
+
+
+}
+
+.channel
+{
+    height: 7%;
+    text-align: center;
+    background-color: white;
+    align-items: center;
+    cursor: pointer;
+    border-top: 1px solid grey;
+}
+
+.channel:hover{
+    background-color: rgba(201, 201, 201, 0.993);
+}
+
+
+.centered-div {
+    width: 60%;
+    /* height: 95%; */
+    min-height: 95%;
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 7px;
+    -moz-box-shadow:    3px 3px 5px 6px rgb(114, 114, 114);
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(114, 114, 114);
+     box-shadow:         3px 3px 5px 6px rgb(114, 114, 114);
+}
+
+.App {
+    height: 100vh;
+}
+
+.dashboard { 
+    width: 100%;
+}
+body { 
+    /* background-image: url('https://66.media.tumblr.com/bc6b6811b17834795d0e2d04760e7c24/tumblr_pbsaeyFUjz1sp8yqvo1_500.jpg'); */
+    background-color: rgb(233, 233, 233);
+    height: 100vh;
+}
+
+.div-input{
+    background-color: white;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-top: 9px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: 13fr 1fr;
+    grid-column-gap: 5px;
+    border-bottom-right-radius: 7px;
+}
+
+.MuiFormControl-marginDense{
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+/* width */
+.channels-list::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  .channels-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .channels-list::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .channels-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(126, 125, 125); 
+  }
+
+
+  .send-button:hover{ 
+       cursor: pointer;
+  }
