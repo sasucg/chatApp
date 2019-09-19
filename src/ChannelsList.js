@@ -1,63 +1,56 @@
 import React from 'react'
-import {Component} from 'react'
+import { Component } from 'react'
 import './App.css'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
 import Channel from './Channel'
 import Dashboard from './Dashboard'
+import { Store } from './Store'
 
-class ChannelsList extends Component { 
-
-    state = {
-      channelsVector: []
-    }
+class ChannelsList extends Component {
 
     constructor() {
         super()
-        this.getChannels()
+       // this.getChannels()
     }
 
 
-    getChannels = () => { 
-        const options = {
-            headers: {'Authorization': 'Bearer ' + this.state.authToken}
-        }
-        axios.get('http://localhost:8000/chat/getChannels/', options)
-        .then(function(response){
-            this.setState({
-                idCanal: response.data.id,
-                nume: response.data.nume,
-                usersInChannel: response.data.users
-            })
-        })
-        .catch(function(error){
-            console.log(error);
-            
-        })
-    }
+    // getChannels = () => {
+    //     const options = {
+    //         headers: { 'Authorization': 'Bearer ' + this.state.authToken }
+    //     }
+    //     axios.get('http://localhost:8000/chat/getChannels/', options)
+    //         .then(function (response) {
+    //             this.setState({
+    //                 idCanal: response.data.id,
+    //                 nume: response.data.nume,
+    //                 usersInChannel: response.data.users
+    //             })
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
 
-    render(){
-        return(
-            <div className="channels-list">
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-                 <Channel name="Canal1" numar="1" lastMessage="buna"/> 
-                 <Channel name="Canal2" numar="2" lastMessage="buna"/>
-
+    //         })
+    // }
+    context = this.context;
+    render() {
+        let allChannels = this.context.state.allChannels;
+        return (
+            <div className="left-component">
+                <div className="owner">
+                    Test
+                </div>
+                    {
+                        allChannels.map((currChannel, i) => (
+                            <Channel className="channel"  channel={currChannel.name.S} key={i}
+                                     channelID={currChannel.id.S}
+                                    />
+                        ))
+                    }
             </div>
         )
     }
 }
+ChannelsList.contextType = Store
 
 export default ChannelsList

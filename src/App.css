@@ -1,40 +1,33 @@
-.channels-list{ 
-    height: 95vh;
-    width: 35%;
-    color: black;
-    list-style-type: disc;
-    overflow: scroll;
-    overflow-x: hidden;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    font-weight: bold;
-}
-
-.channel
-{
-    height: 7%;
-    text-align: center;
-    background-color: white;
-    align-items: center;
-    cursor: pointer;
-    border-top: 1px solid grey;
-}
-
-.channel:hover{
-    background-color: rgba(201, 201, 201, 0.993);
-}
 
 @media screen and (min-width : 1441px)
 {
+    .div-login {
+        margin-top: 25vh;
+        margin-left: 45%;
+    }
+    
+    
+    body { 
+        background-color: rgb(233, 233, 233);
+        height: 100vh;
+        margin: 0;
+        overflow-y: hidden;
+    }
+    
+    .App {
+        height: 100vh;
+    }
+    
+    
+    .dashboard { 
+        width: 100%;
+    }
+    
     .centered-div {
-        width: 1398.640px;
-        /* width: 55%; */
-        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
+        width: 1398.640px;        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
         background-repeat: repeat;
         display: flex;
         flex-direction: row;
-        /* margin-right: 22%;
-        margin-left: 22%; */
         margin-top: 1%;
         margin-bottom: 1%;
         margin-left: auto;
@@ -44,38 +37,63 @@
         -webkit-box-shadow: 2px -2px 5px 1px rgba(0, 0, 0, 0.7);
         box-shadow:         0 1px 1px 0 rgba(0,0,0,.06), 0 2px 5px 0 rgba(0,0,0,.2) ;
         position: relative;
-        /* min-width: 55%; */
     }
-}
+    
 
-@media screen and (max-width : 1440px)
-{
-    .centered-div {
-        /* width: 1398.640px; */
-        width: 100%;
-        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
-        background-repeat: repeat;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        /* margin-right: 22%;
-        margin-left: 22%; */
-        /* margin-top: 1%;
-        margin-bottom: 1%;
-        margin-left: auto;
-        margin-right: auto; */
-        margin: 0;
-        /* border-radius: 7px;
-        -moz-box-shadow:    2px -2px 5px 1px rgba(0, 0, 0, 0.7);
-        -webkit-box-shadow: 2px -2px 5px 1px rgba(0, 0, 0, 0.7);
-        box-shadow:         0 1px 1px 0 rgba(0,0,0,.06), 0 2px 5px 0 rgba(0,0,0,.2) ; */
-        position: relative;
-        /* min-width: 55%; */
+    
+    .user-details-dash { 
+        background-color: #efefef;
+        height: 60px;
+    }
+    
+    
+    .div-input{ 
+        background-color: white;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        margin-top: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: grid;
+        grid-template-columns: 13fr 1fr;
+        grid-column-gap: 5px;
+        border-bottom-right-radius: 7px;
+        background-color: #efefef;
+    }
+    
+     
+    .send-button:hover { 
+        cursor: pointer;
+    }
+ 
+    .MuiFormControl-marginDense{
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+    
+       
+    .div-buton{
+        margin-top: 7px;
+        margin-left: 10px;
     }
 
-    .channels-list{ 
-        height: 100vh;
+    .div-chat { 
+        height: 87.9%;
+    }
+    
+    .div-message { 
+        background-color: red;
+    }
+
+    
+    .left-component{
+        height: 95vh;
         width: 35%;
+    
+    }
+    .channels-list{ 
+        height: 88.5vh;
+        width: 100%;
         color: black;
         list-style-type: disc;
         overflow: scroll;
@@ -83,6 +101,206 @@
         border-top-left-radius: 7px;
         border-bottom-left-radius: 7px;
         font-weight: bold;
+    }
+    
+    .owner { 
+        width: 99.7%;
+        height: 60px;
+        background-color: #efefef;
+        border-right: 1px solid lightgrey;
+    }
+    
+    
+    .channel
+    {
+        height: 60px;
+        text-align: center;
+        background-color: white;
+        align-items: center;
+        cursor: pointer;
+        border-top: 1px solid grey;
+    }
+
+    .channel:last-child{
+        border-bottom: 1px solid grey;
+    }
+    
+    .channel:hover{
+        background-color: rgba(201, 201, 201, 0.993);
+    }
+
+    /* width */
+    .channels-list::-webkit-scrollbar {
+        width: 7px;
+    }
+      
+    /* Track */
+      .channels-list::-webkit-scrollbar-track {
+        background: #ffffff; 
+    }
+       
+    /* Handle */
+    .channels-list::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+      
+    /* Handle on hover */
+    .channels-list::-webkit-scrollbar-thumb:hover {
+        background: rgb(126, 125, 125); 
+    }
+}
+
+@media screen and (max-width : 1440px)
+{
+    .App {
+        height: 100vh;
+    }
+    
+    .centered-div {
+        width: 100%;
+        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin: 0;
+        position: relative;
+
+    }
+    .dashboard { 
+        width: 100%;
+    }
+
+    
+    body { 
+        background-color: rgb(233, 233, 233);
+        height: 100vh;
+        margin: 0;
+        overflow-y: hidden;
+    }
+    
+/* 
+    .centered-div {
+        width: 1398.640px;        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png );
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 7px;
+        -moz-box-shadow:    2px -2px 5px 1px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 2px -2px 5px 1px rgba(0, 0, 0, 0.7);
+        box-shadow:         0 1px 1px 0 rgba(0,0,0,.06), 0 2px 5px 0 rgba(0,0,0,.2) ;
+        position: relative;
+    } */
+    
+
+    
+    .user-details-dash { 
+        background-color: #efefef;
+        height: 60px;
+    }
+    
+    
+    .div-input{ 
+        background-color: white;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        margin-top: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: grid;
+        grid-template-columns: 13fr 1fr;
+        grid-column-gap: 5px;
+        border-bottom-right-radius: 7px;
+        background-color: #efefef;
+    }
+    
+     
+    .send-button:hover { 
+        cursor: pointer;
+    }
+ 
+    .div-chat { 
+        height: 88.5%;
+    }
+
+
+    
+    .MuiFormControl-marginDense{
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+    
+       
+    .div-buton{
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    
+    .left-component{
+        height: 95vh;
+        width: 35%;
+    
+    }
+    .channels-list{ 
+        height: 93.5vh;
+        width: 100%;
+        color: black;
+        list-style-type: disc;
+        overflow: scroll;
+        overflow-x: hidden;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+        font-weight: bold;
+    }
+    
+    .owner { 
+        width: 99.7%;
+        height: 60px;
+        background-color: #efefef;
+        border-right: 1px solid lightgrey;
+    }
+    
+    
+    .channel
+    {
+        height: 60px;
+        text-align: center;
+        background-color: white;
+        align-items: center;
+        cursor: pointer;
+        border-top: 1px solid grey;
+    }
+
+    .channel:last-child{
+        border-bottom: 1px solid grey;
+    }
+    
+    .channel:hover{
+        background-color: rgba(201, 201, 201, 0.993);
+    }
+
+    /* width */
+    .channels-list::-webkit-scrollbar {
+        width: 7px;
+    }
+      
+    /* Track */
+      .channels-list::-webkit-scrollbar-track {
+        background: #ffffff; 
+    }
+       
+    /* Handle */
+    .channels-list::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+      
+    /* Handle on hover */
+    .channels-list::-webkit-scrollbar-thumb:hover {
+        background: rgb(126, 125, 125); 
     }
 }
 
@@ -93,68 +311,3 @@
     }
 }
 
-.App {
-    height: 100vh;
-}
-
-.dashboard { 
-    width: 100%;
-}
-body { 
-    /* background-image: url('https://66.media.tumblr.com/bc6b6811b17834795d0e2d04760e7c24/tumblr_pbsaeyFUjz1sp8yqvo1_500.jpg'); */
-    background-color: rgb(233, 233, 233);
-    height: 100vh;
-    margin: 0;
-}
-.div-buton{
-    margin-top: 7px;
-    margin-left: 10px;
-}
-.div-input{
-    background-color: white;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-top: 9px;
-    padding-left: 5%;
-    padding-right: 5%;
-    display: grid;
-    grid-template-columns: 13fr 1fr;
-    grid-column-gap: 5px;
-    border-bottom-right-radius: 7px;
-    
-}
-
-.MuiFormControl-marginDense{
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-}
-
-/* width */
-.channels-list::-webkit-scrollbar {
-    width: 7px;
-  }
-  
-  /* Track */
-  .channels-list::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  .channels-list::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  .channels-list::-webkit-scrollbar-thumb:hover {
-    background: rgb(126, 125, 125); 
-  }
-
-
-  .send-button:hover{ 
-       cursor: pointer;
-  }
-
-  .div-login {
-    margin-top: 25vh;
-    margin-left: 45%;
-}
