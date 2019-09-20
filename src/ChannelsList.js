@@ -11,7 +11,7 @@ class ChannelsList extends Component {
 
     constructor() {
         super()
-       // this.getChannels()
+        // this.getChannels()
     }
 
 
@@ -40,13 +40,15 @@ class ChannelsList extends Component {
                 <div className="owner">
                     Test
                 </div>
-                    {
-                        allChannels.map((currChannel, i) => (
-                            <Channel className="channel"  channel={currChannel.name.S} key={i}
-                                     channelID={currChannel.id.S}
-                                    />
-                        ))
-                    }
+                {
+                    allChannels.map((currChannel, i) => (
+                        <Channel className="channel"
+                            key={i}
+                            channelID={currChannel.id.S}
+                            channelName={currChannel.name.S}
+                        />
+                    ))
+                }
             </div>
         )
     }

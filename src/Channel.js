@@ -14,23 +14,25 @@ const Channel = (props) => {
 
   const context = useContext(Store);
 
-  const handleClickChangeChannel =  async () => {
-    await context.dispatch({
-      type: 'SELECT_CHANNEL',
-      payload: props.channelID
+  const handleClickChangeChannel = () => {
 
+    context.dispatch({
+      type: 'SELECT_CHANNEL',
+      payload: props.channelID,
     })
 
-    console.log(context)
+    context.dispatch({
+      type: 'SELECT_CHANNEL_NAME',
+      payload: props.channelName
+    })
+
   }
 
 
 
   return (
     <div className="channel" onClick={() => handleClickChangeChannel()}>
-      <div>
-        {props.channel}
-      </div>
+      {props.channelName}
     </div>
   )
 

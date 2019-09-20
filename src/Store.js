@@ -25,7 +25,7 @@ const initialState = {
             "userId" : {
                 "S" : "23"
             }
-        },
+        },  
     ],
     allChannels:[
         {
@@ -43,11 +43,19 @@ const initialState = {
             "name" : {
                 "S" : "Name11 Surname22"
             }
+        },
+        {
+            "id" : {
+                "S" : "222"
+            },
+            "name" : {
+                "S" : "Name1123 Surname2442"
+            }
         }
     ],
     authToken: '',
     refreshToken: '',
-    userId: '',
+    userNameSelected: '',
     selectedChannel: '',
 };
 
@@ -58,6 +66,9 @@ function reducer(state, action) {
 
         case 'SELECT_CHANNEL':
             return{...state, selectedChannel: action.payload}
+        
+        case 'SELECT_CHANNEL_NAME':
+            return{...state, userNameSelected: action.payload}
         // case 'FETCH_DATA':
         //     return{...state, episodes: action.payload};
         // case 'ADD_FAV':
