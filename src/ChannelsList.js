@@ -9,32 +9,32 @@ import { Store } from './Store'
 
 class ChannelsList extends Component {
 
-    constructor() {
-        super()
-        // this.getChannels()
+    constructor(props) {
+        super(props)
+        this.state = {
+            allChannels: []
+        }
     }
 
 
-    // getChannels = () => {
-    //     const options = {
-    //         headers: { 'Authorization': 'Bearer ' + this.state.authToken }
-    //     }
-    //     axios.get('http://localhost:8000/chat/getChannels/', options)
-    //         .then(function (response) {
-    //             this.setState({
-    //                 idCanal: response.data.id,
-    //                 nume: response.data.nume,
-    //                 usersInChannel: response.data.users
-    //             })
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
+    componentDidMount = () => {
+        
+        // fetch("http://app-prod.b4cjkb3nwe.eu-west-1.elasticbeanstalk.com/chat/getChannelsOfUser/029a1a22-8ede-4f4d-9dfd-b54e750b274d/")
+        // .then(res => res.json())
+        // .then(channels => this.setState({allChannels: channels}))
+        var obj = this;
+        axios.get('http://app-prod.b4cjkb3nwe.eu-west-1.elasticbeanstalk.com/chat/getChannelsOfUser/fd9a479d-8b7c-4840-8bb5-c75a642ea5c3/')
+        .then(function (response) {
+            obj.setState({allChannels: response.data})
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    }
 
-    //         })
-    // }
     context = this.context;
     render() {
-        let allChannels = this.context.state.allChannels;
+        let allChannels = this.state.allChannels;
         return (
             <div className="left-component">
                 <div className="owner">

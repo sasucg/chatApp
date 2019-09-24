@@ -3,72 +3,25 @@ import React from 'react'
 export const Store = React.createContext();
 
 const initialState = { 
-    messageList:[
-        {
-            "content" : {
-                "S" : "A message sent by ansdfadsgad id lung"
-            },
-            "userName" : {
-                "S" : "Name Surname"
-            },
-            "userId" : {
-                "S" : "029a1a22-8ede-4f4d-9dfd-b54e750b094d"
-            }
-        },
-        {
-            "content" : {
-                "S" : "A message sent by an user id 23"
-            },
-            "userName" : {
-                "S" : "Sending user name"
-            },
-            "userId" : {
-                "S" : "23"
-            }
-        },  
-    ],
-    allChannels:[
-        {
-            "id" : {
-                "S" : "029a1a22-8ede-4f4d-9dfd-b54e750b094d"
-            },
-            "name" : {
-                "S" : "Name Surname"
-            }
-        },
-        {
-            "id" : {
-                "S" : "23"
-            },
-            "name" : {
-                "S" : "Name11 Surname22"
-            }
-        },
-        {
-            "id" : {
-                "S" : "222"
-            },
-            "name" : {
-                "S" : "Name1123 Surname2442"
-            }
-        }
-    ],
+    userLoggedinId: 'fd9a479d-8b7c-4840-8bb5-c75a642ea5c3',
+    userLoggedinName: 'Emmily Sheffield',
     authToken: '',
     refreshToken: '',
-    userNameSelected: '',
+    channelNameSelected: '',
     selectedChannel: '',
+    oldSelectedChannel: ''
 };
 
 function reducer(state, action) {
     switch(action.type){
-        case 'SEND_MESSAGE': 
-            return{...state, messageList: [...state.messageList, action.payload]};
+        // case 'SEND_MESSAGE': 
+        //     return{...state, messageList: [...state.messageList, action.payload]};
 
         case 'SELECT_CHANNEL':
-            return{...state, selectedChannel: action.payload}
+            return{...state, oldSelectedChannel: state.selectedChannel, selectedChannel: action.payload}
         
         case 'SELECT_CHANNEL_NAME':
-            return{...state, userNameSelected: action.payload}
+            return{...state, channelNameSelected: action.payload}
         // case 'FETCH_DATA':
         //     return{...state, episodes: action.payload};
         // case 'ADD_FAV':

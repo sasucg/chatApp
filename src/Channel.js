@@ -6,8 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Dashboard from './Dashboard'
 import { Store } from './Store'
-
-
+import axios from 'axios'
 
 
 const Channel = (props) => {
@@ -27,11 +26,8 @@ const Channel = (props) => {
     })
 
   }
-
-
-
   return (
-    <div className="channel" onClick={() => handleClickChangeChannel()}>
+    <div className="channel" onClick={() => {handleClickChangeChannel()}}>
       {props.channelName}
     </div>
   )
